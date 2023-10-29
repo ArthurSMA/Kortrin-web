@@ -42,7 +42,7 @@ export default function Usuario() {
         console.log(`Editar usuário com ID: ${id}`);
 
         const response = await axios.put(`${URL_API}/${id}`, {
-            nome: "Novo nome", // Substitua por um estado ou valor do usuário
+            nome: "Novo nome",
         });
 
         if (!response.ok) {
@@ -71,7 +71,6 @@ export default function Usuario() {
         const data = await response.data;
         console.log(data);
 
-        // Atualizar os dados da tabela
         fetchData();
         toast.success('Usuário removido com sucesso!');
     };
